@@ -54,7 +54,6 @@
 }
 
 .main-content {
-  box-sizing: border-box;
   padding: 48px 64px;
   background-color: #fff;
   border-radius: 4px;
@@ -120,7 +119,6 @@
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
   height: 1px;
   width: 100%;
   background-color: #ececec;
@@ -161,4 +159,201 @@
 
 .resend-mail {
   display: inline-block;
+}
+
+.input-init {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.input-area {
+  box-sizing: border-box;
+  height: 36px;
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  color: #545658;
+  font-size: 13px;
+  line-height: 2;
+  background-color: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+}
+
+.input-area:focus {
+  background-color: #fff;
+  border-color: rgba(59, 133, 133, .4);
+  box-shadow: 0 0 0 2px rgba(1, 191, 189, .1);
+}
+
+.gender-content input, .course input {
+  display: none;
+}
+
+.row:not(:first-child) {
+  margin-top: 20px;
+}
+
+/* 名前 */
+.red {
+  color: #dd4b39;
+}
+
+.name {
+  display: flex;
+}
+
+.label-text {
+  font-size: 12px;
+  color: #545658;
+}
+
+.name-box:last-child {
+  margin-left: 16px;
+}
+
+/* 性別 */
+.gender-contents {
+  display: flex;
+  color: #545658;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.gender-content {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.gender-content:first-child {
+  margin-left: 0;
+}
+
+.gender-content span {
+  position: relative;
+  display: inline-block;
+  padding: 3px 3px 3px 20px;
+}
+
+.gender-content span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 14px;
+  width: 14px;
+  background-color: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+}
+
+.gender-input:checked + span::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  height: 8px;
+  width: 8px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #01bfbd;
+}
+
+/* 出身 */
+.select-area {
+  position: relative;
+  margin-top: 8px;
+}
+
+.select-area > .input-area {
+  margin-top: 0;
+}
+
+.select-area::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  transform: rotate(45deg);
+  height: 5px;
+  width: 5px;
+  border-right: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.origin-input:focus {
+  background-color: #fbfbfb;
+  border-color: #d9d9d9;
+  box-shadow: initial;
+}
+
+/* 希望コース */
+.course-option {
+  margin-top: 10px;
+  color: #545658;
+  font-size: 16px;
+}
+
+.course-option:nth-of-type(1) {
+  margin-top: 5px;
+}
+
+.course-option-text {
+  position: relative;
+  padding-left: 25px;
+}
+
+.course-option-text::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 15px;
+  width: 15px;
+  margin-top: -8px;
+  border: 1px solid #d9d9d9;
+}
+
+.course-option input:checked + .course-option-text::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: rotate(45deg);
+  height: 16px;
+  width: 8px;
+  margin-top: -12px;
+  border-right: 3px solid #01bfbd;
+  border-bottom: 3px solid #01bfbd;
+}
+
+/* 備考 */
+.remarks .input-area {
+  height: 100px;
+}
+
+/* 送信ボタン */
+.submit-btn {
+  padding: 13px;
+  background-color: #01bfbd;
+  color: #fff;
+  border: 1px solid #01bfbd;
+}
+
+.submit-btn:hover {
+  background-color: #01a6a4;
+}
+
+.submit-btn:active {
+  background-color: #fff;
+  color: #01a6a4;
+  border-color: #d9d9d9;
 }
